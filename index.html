@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ITSI Landing Spot Assistant</title>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js" defer></script>
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+        <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+        <script src="https://algorithmia.com/v1/clients/js/algorithmia-0.2.1.js" type="text/javascript"></script>
+        <script src="scripts/main.js" defer></script>
+        <link rel="stylesheet" href="styles/main.css">
+	</head>
+	<body>
+        <div id="main">
+            <div id="title">
+                <h1>ITSI Landing Spot Assistant</h1>
+            </div>
+            <div id="asteroids">
+                <div>
+                    <h1 id="asteroidTitle">Incoming Asteroids near Earth today</h1>
+                    <ul>
+                        <li id="asteroidNames"></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="interactiveMap">
+                <h1>Search for a Landing Spot</h1>
+                <div id="infoSpotContainer">
+                    <div id="infoSpot">
+                        <p id="distance">Distance to the Kennedy Space Center:</p>
+                        <p id="travelTime">Travel Time:</p>
+                        <p id="elevation">Elevation:</p>
+                    </div>
+                </div>
+                <div id="infoWeatherContainer">
+                    <div id="infoWeather">Click on the Map to view Data</div>
+                </div>
+                <div id="mapContainer">
+                    <div id='map' style='width: 1300px; height: 500px;'></div>
+                </div>
+
+                <!-- This section down below is entirely from the Mapbox exampple -->
+                <div id="menuContainer">
+                    <div id="menu">
+                        <input id="streets-v11" type="radio" name="rtoggle" checked="checked">
+                        <label for="streets-v11">Default</label>
+                        <input id="satellite-v9" type="radio" name="rtoggle">
+                        <label for="satellite-v9">Satellite</label>
+                        <input id="navigation-day-v1" type="radio" name="rtoggle">
+                        <label for="navigation-day-v1">Navigation</label>
+                        <input id="dark-v10" type="radio" name="rtoggle">
+                        <label for="dark-v10">Dark Mode</label>
+                    </div>
+                </div>
+            </div>
+        </div>        
+	</body>
+</html>
